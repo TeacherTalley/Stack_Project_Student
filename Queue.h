@@ -41,6 +41,15 @@ public:
      * @param other The other queue to copy from
      */
     Queue(const Queue &other) : elements(other.elements) {}
+    
+    /**
+     * @brief Destructor
+     * Clears all elements in the queue.
+     */
+    ~Queue()
+    {
+        elements.clear();
+    }
 
     /**
      * @brief Checks if the queue is empty

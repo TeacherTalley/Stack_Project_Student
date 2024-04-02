@@ -48,6 +48,15 @@ public:
     Stack(const Stack& other) : data(other.data) {} 
 
     /**
+     * @brief Destructor
+     * Frees all stack elements
+     */
+    ~Stack()
+    {
+        data.clear();
+    }
+
+    /**
      * @brief Check if the stack is empty
      * @return true if the stack is empty, false otherwise
      */
@@ -195,8 +204,7 @@ public:
                 the line on word boundaries.  If the stack is a string,
                 simply use the entire input string as the value.
             
-                see: https://stackoverflow.com/questions/62240203/
-                      how-do-i-stdgetline-into-a-template-type
+                see: https://stackoverflow.com/questions/62240203/how-do-i-stdgetline-into-a-template-type
 
                 Enable VS Code to use C++17 by adding the following to
                 the .vscode/tasks.json file:
